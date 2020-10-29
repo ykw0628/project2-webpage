@@ -1,0 +1,41 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+  
+
+<!-- home -->
+  <main class="container">
+      <div>
+    <% if(title == "Home") { %>
+    <section id="home">
+        <div class="home__container">
+            <h1 class="home__title">Hello,<br>Welcome to <%= title %> page<br>
+            <h2 class="home__description">I am software engineering student in Toronto <br> Currently looking for Co-op position </h2>
+            <button class="home__contact">Contact Us</button>  
+        </div> 
+    </section>
+    <% } %>
+
+    <% if(title == "Services") { %>
+    <%- include ./content/services.ejs %>  
+    <% } %>
+    <% if(title == "Contact List") { %>
+    <%- include ./content/contactsList.ejs %>  
+    <% } %>
+    <% if(title == "Add contacts") { %>
+    <%- include ./content/add-contacts.ejs %>  
+    <% } %>
+    <% if(title == "Update contacts") { %>
+    <%- include ./content/update-contacts.ejs %>  
+    <% } %>
+        </div>
+  </main>
+  
+<%- include partials/bottom_nav.ejs %>  
+
+<%- include partials/footer.ejs %>
+  
+
+
+
+

@@ -1,0 +1,30 @@
+
+<div class="wrapper justify-content-md-center">
+  <div class="col-8">
+  <form method="POST">
+  <div class="form-group">
+    <label for="contactName">Contact Name</label>
+    <input type="text" class="form-control" id="contactName" aria-describedby="contactName"
+    name ="contactName" placeholder = "Enter name" value="<%=contact.name %>"
+    required>
+  </div>
+  <div class="form-group">
+    <label for="contactNumber">Contact Number</label>
+    <input type="text" class="form-control" id="contactNumber" aria-describedby="contactNumber"
+    name ="contactNumber" placeholder = "Enter contact number"  value="<%=contact.number %>"
+    required>
+  </div>
+ <div class="form-group">
+    <label for="contactEmail">Email</label>
+    <input type="email" class="form-control" id="contactEmail" aria-describedby="contactEmail"
+    name ="contactEmail" placeholder = "Enter email"  value="<%=contact.email %>"
+    required>
+  </div>
+  <div class = "updatebuttons">
+  <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-plus-circle"></i>Update</button>
+  <a href="/contacts-list/delete/<%= contact.id %>" class="btn btn-danger btn-lg"><i class="fas fa-trash-alt"></i>Delete</a>
+  <a href="/contacts-list" class="btn btn-warning btn-lg"><i class="fas fa-undo"></i>Cancel</a>
+  </div>
+</form>
+  </div>
+</div>

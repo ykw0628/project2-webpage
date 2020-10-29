@@ -1,0 +1,67 @@
+<!-- Navbar -->
+        <nav id="navbar">
+            <div class="navbar__logo">
+            <img src="../../asset/imgs/favicon.png" alt="Kunwoo_Yoon" class="kw" style='vertical-align:middle; display:inline;'>
+            <a href="https://ykw0628.github.io/portfolio/" >Colin</a>
+            </div>
+            <div class="navbar__menu">
+             <ul>
+			 <% if (title == "Home"){ %>
+        <li class="navbar__menu__item">
+        <% } else  { %>
+        <li class="navbar__menu__item">
+        <% } %>
+          <a class="nav-link" href="/home">Home </a>
+        </li>
+
+        <% if (title == "About") { %>
+        <li class="navbar__menu__item">
+        <% } else  { %>
+        <li class="navbar__menu__item">
+        <% } %>
+          <a class="nav-link" href="/about">About </a>
+        </li>
+
+        <% if (title == "Services") { %>
+        <li class="navbar__menu__item">
+        <% } else  { %>
+        <li class="navbar__menu__item">
+        <% } %>
+          <a class="nav-link" href="/services">Services </a>
+        </li>
+        <!-- redirect to login page if a user is not authenticated -->
+        <% if (typeof displayName == 'string' && displayName) { %>
+        <li class="navbar__menu__item">
+        <a class="nav-link" href="/contacts-list">Contacts List </a>
+        </li>
+        <% } else  { %>
+        <li class="navbar__menu__item">
+           <a class="nav-link" href="/login">Contacts List </a>
+      </li>
+        <% } %>
+
+        <% if (title == "Contact") { %>
+        <li class="navbar__menu__item">
+        <% } else  { %>
+        <li class="navbar__menu__item">
+        <% } %>
+          <a class="nav-link" href="/contact">Contact </a>
+        </li>
+        <% if(typeof displayName == 'string' && displayName) { %>
+            <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout"><i class="fas fa-lg fa-sign-out-alt"></i> Logout </a>
+            </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/login"><i class="fas fa-lg fa-sign-in-alt"></i> Login </a>
+            </li>
+          <% } %>
+             </ul>
+            </div>
+ <!-- Toggle button-->
+            <button class="navbar__toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+  
