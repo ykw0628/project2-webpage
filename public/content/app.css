@@ -541,6 +541,7 @@ Date: Oct. 05.2020
              flex-direction: column;
              align-items: flex-start;
              background-color: var(--color-deep-blue);
+             color: var(--color-white);
          }
          .navbar__menu__item a{
             cursor: pointer;

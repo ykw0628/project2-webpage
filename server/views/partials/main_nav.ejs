@@ -48,13 +48,13 @@
           <a class="nav-link" href="/contact">Contact </a>
         </li>
         <% if(typeof displayName == 'string' && displayName) { %>
-            <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
-            <li class="nav-item">
-              <a class="nav-link" href="/logout"><i class="fas fa-lg fa-sign-out-alt"></i> Logout </a>
+            <li class="navbar__menu__item"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+            <li class="navbar__menu__item">
+              <a href="/logout"><i class="fas fa-lg fa-sign-out-alt"></i> Logout </a>
             </li>
           <% } else { %>
-            <li class="nav-item">
-              <a class="nav-link" href="/login"><i class="fas fa-lg fa-sign-in-alt"></i> Login </a>
+            <li class="navbar__menu__item">
+              <a href="/login"><i class="fas fa-lg fa-sign-in-alt"></i> Login </a>
             </li>
           <% } %>
              </ul>
