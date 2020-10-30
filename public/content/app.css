@@ -201,8 +201,6 @@ Date: Oct. 05.2020
       color: var(--color-white);
       background-color: var(--color-deep-blue);
       border-radius: var(--size-border-radius);
-   
-    
   }
   .home__contact:hover {
       transition: all 1s ease;
@@ -544,8 +542,17 @@ Date: Oct. 05.2020
              align-items: flex-start;
              background-color: var(--color-deep-blue);
          }
+         .navbar__menu__item a{
+            cursor: pointer;
+            color: var(--color-white)!important;
+            border: 1px solid transparent;
+            border-radius: var(--size-border-radius);
+            text-decoration: none;
+        }
          #navbar.navbar--dark{
              padding: 16px;
+             color: var(--color-white);
+
          }
          .navbar__menu{
              flex-direction: column;
